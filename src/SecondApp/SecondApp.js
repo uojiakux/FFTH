@@ -1,5 +1,5 @@
 import React from 'react';
-import openerPicture from '../Images/second-picture.jpg';
+import openerPicture from '../images/second-picture.jpg';
 import './SecondApp.css';
 
 function SecondApp() {
