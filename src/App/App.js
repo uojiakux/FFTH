@@ -4,8 +4,6 @@ import openerPicture from '../images/opener-picture.jpg';
 import './App.css';
 
 // Redux imports 
-import { Provider } from 'react-redux';
-import store from '../store';
 
 import Home from '../pages/Home';
 // import AboutUs from '..pages/AboutUs';
@@ -16,7 +14,6 @@ import Home from '../pages/Home';
 
 function App() {
   return (
-    <Provider store={store}>
       <Router>
       <div className="App">
         <header className="App-header">
@@ -35,7 +32,6 @@ function App() {
         </Switch>
       </div>
       </Router>
-    </Provider>
   );
 }
 
