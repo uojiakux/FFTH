@@ -1,10 +1,17 @@
 import React from 'react';
-import openerPicture from '../Images/second-picture.jpg';
 import './Footer.css';
+
+const styles = {
+  footerStyle: {
+    background: 'green',
+    justifyContent: 'flex-end'
+  }
+};
 
 function Footer() {
   return (
-    <div className="Footer">
+    <div style={styles.footerStyle} className='footer'>
+      <a href="/">Welcome</a>
     </div>
   );
 }

@@ -1,11 +1,19 @@
 import React from 'react';
-import openerPicture from '../Images/second-picture.jpg';
 import './NavBar.css';
+
+const styles = {
+  navbarStyle: {
+    background: 'green',
+    justifyContent: 'flex-end'
+  }
+};
+
+// We use JSX curly braces to evaluate the style object on the JSX tag
 
 function NavBar() {
   return (
-    <div className="NavBar">
-    </div>
+    <nav style={styles.navbarStyle} className='navbar'>
+    </nav>
   );
 }
 
