@@ -4,13 +4,15 @@ import './App.css';
 
 // Component imports
 // import Drawer from '../components/Drawer/Drawer';
-import ResponsiveDrawer from '../components/Drawer/ResponsiveDrawer';
+// import ResponsiveDrawer from '../components/Drawer/ResponsiveDrawer';
 import Footer from '../components/Footer/Footer';
 // import Jumbotron from '../components/Jumbotron/Jumbotron';
 import ResponsiveJumbotron from '../components/Jumbotron/ResponsiveJumbotron';
 import NavBar from '../components/NavBar/NavBar';
 
 // Redux imports 
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from '../actions/index';
 
 // import Home from '../pages/Home';
 import AboutUs from '../pages/AboutUs';
@@ -20,6 +22,11 @@ import History from '../pages/History';
 // import ContactUs from '../pages/ContactUs';
 
 function App() {
+
+  const counter = useSelector(state => state.counter);
+  const islogged = useSelector(state => state.islogged);
+  const dispatch = useDispatch();
+
   return (
       // <Router>
       // <div className="App">
@@ -44,8 +51,12 @@ function App() {
       <div>
         <h1>Welcome to the Beginning Beginning of Foundation for the Helpless</h1>
         <NavBar />
-        <ResponsiveDrawer />
+        {/* <ResponsiveDrawer /> */}
         <ResponsiveJumbotron />
+        <h1>Counter: {counter}</h1>
+        <button onClick={() => dispatch(increment())}>+</button>
+        <button onClick={() => dispatch(decrement())}>-</button>
+        { islogged ? <h1>Valuable information I shouldn't see if I am not logged in.</h1> : ''}
         <Link to={`/aboutus`}>
         <h1>Testing Link to About Us</h1>
         </Link>

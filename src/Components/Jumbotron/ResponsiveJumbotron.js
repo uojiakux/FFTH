@@ -10,10 +10,10 @@ class ResponsiveJumbotron extends Component {
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
             <div className="carousel-item active">
-                <img src={firstimage} class="d-block w-100" alt="..." />
+                <img src={firstimage} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
-            <img src={secondimage} class="d-block w-100" alt="..." />
+            <img src={secondimage} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
             <img src={thirdimage} className="d-block w-100" alt="..." />
